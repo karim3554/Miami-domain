@@ -45,7 +45,6 @@ export default function Navbar() {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E5B842] via-[#FDF0CD] to-[#B88E28] p-[1.5px] flex items-center justify-center shadow-lg shadow-[#E5B842]/15 group-hover:shadow-[#E5B842]/30 transition-all">
               <div className="w-full h-full bg-[#0A1124] rounded-[10px] flex items-center justify-center p-1.5">
                 <svg className="w-full h-full text-[#E5B842]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Luxury Logo: Art Deco M & P Monogram with Miami Palms */}
                   <path d="M20 80 V30 L50 60 L80 30 V80" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M50 20 V60" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
                   <circle cx="50" cy="20" r="8" fill="currentColor"/>
@@ -63,13 +62,13 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Desktop Navigation (Shows only on large screens, preventing overlap) */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          {/* Desktop Navigation (Shows only on extra large screens, preventing any overlap) */}
+          <nav className="hidden xl:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs xl:text-sm text-slate-300 hover:text-[#E5B842] transition-colors font-semibold tracking-wide relative group shrink-0"
+                className="text-xs xl:text-sm text-slate-300 hover:text-[#E5B842] transition-colors font-semibold tracking-wide relative group shrink-0 whitespace-nowrap"
               >
                 {link.name}
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#E5B842] transition-all duration-300 group-hover:w-full" />
@@ -83,7 +82,7 @@ export default function Navbar() {
               href="https://www.godaddy.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-200 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-[#E5B842]/50 transition-all"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-200 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-[#E5B842]/50 transition-all whitespace-nowrap"
             >
               <ShieldCheck className="w-3.5 h-3.5 text-[#E5B842]" />
               <span>GoDaddy Verified</span>
@@ -94,7 +93,7 @@ export default function Navbar() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-emerald-300 hover:text-white bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/40 transition-all"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-emerald-300 hover:text-white bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/40 transition-all whitespace-nowrap"
             >
               <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
               <span>Chat on WhatsApp</span>
@@ -102,14 +101,14 @@ export default function Navbar() {
 
             <a
               href="#make-offer"
-              className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-[#0A1124] bg-gradient-to-r from-[#FDF0CD] via-[#E5B842] to-[#B88E28] hover:brightness-110 transition-all shadow-md shadow-[#E5B842]/20 active:scale-95"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-[#0A1124] bg-gradient-to-r from-[#FDF0CD] via-[#E5B842] to-[#B88E28] hover:brightness-110 transition-all shadow-md shadow-[#E5B842]/20 active:scale-95 whitespace-nowrap"
             >
               Make an Offer
             </a>
           </div>
 
           {/* Mobile Menu Button (Activated for both small and medium/large screens below xl) */}
-          <div className="flex lg:hidden">
+          <div className="flex xl:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 focus:outline-none"
@@ -123,7 +122,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0A1124]/98 backdrop-blur-xl border-b border-[#E5B842]/30 px-4 pt-4 pb-6 space-y-4 shadow-2xl">
+        <div className="xl:hidden bg-[#0A1124]/98 backdrop-blur-xl border-b border-[#E5B842]/30 px-4 pt-4 pb-6 space-y-4 shadow-2xl">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a

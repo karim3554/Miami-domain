@@ -31,23 +31,23 @@ export default function HeroSection({ onCopyDomain }: HeroSectionProps) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
         
         {/* Availability Badge */}
-        <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-[#E5B842]/50 shadow-lg shadow-[#E5B842]/15 mb-8 backdrop-blur-md">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-xs font-bold tracking-wider uppercase text-[#FDF0CD]">
+        <div className="inline-flex items-center flex-wrap justify-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-[#E5B842]/50 shadow-lg shadow-[#E5B842]/15 mb-8 backdrop-blur-md max-w-full">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+          <span className="text-[10px] sm:text-xs font-bold tracking-wider uppercase text-[#FDF0CD]">
             Exclusive Premium Asset Available
           </span>
-          <span className="text-slate-500">•</span>
-          <span className="text-xs text-slate-300 font-medium">Verified via GoDaddy Escrow</span>
+          <span className="text-slate-500 hidden sm:inline">•</span>
+          <span className="text-[10px] sm:text-xs text-slate-300 font-medium hidden sm:inline">Verified via GoDaddy Escrow</span>
         </div>
 
         {/* Hero Title */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.15]">
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.15] break-words">
           Own Miami’s Premier <br className="hidden sm:inline" />
           <span className="gold-gradient-text">Real Estate Domain</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-200 mb-10 leading-relaxed font-light">
+        <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-200 mb-10 leading-relaxed font-light px-2">
           Elevate your real estate brand in South Florida’s high-end property market. 
           <strong className="text-white font-medium"> miamipropertydeals.com</strong> combines three high-volume commercial keywords into a single iconic digital asset.
         </p>
@@ -56,16 +56,16 @@ export default function HeroSection({ onCopyDomain }: HeroSectionProps) {
         <div className="max-w-2xl mx-auto mb-12 relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-[#E5B842]/50 via-[#FDF0CD]/30 to-[#B88E28]/50 rounded-2xl blur-lg opacity-80 group-hover:opacity-100 transition duration-500" />
           
-          <div className="relative glass-panel rounded-2xl p-5 sm:p-7 border border-[#E5B842]/50 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xl">
-            <div className="flex items-center space-x-3 text-left">
-              <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700 text-[#E5B842]">
+          <div className="relative glass-panel rounded-2xl p-4 sm:p-7 border border-[#E5B842]/50 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xl">
+            <div className="flex items-center space-x-3 text-left w-full sm:w-auto">
+              <div className="p-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-[#E5B842] shrink-0">
                 <Building2 className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <div>
-                <span className="text-[11px] font-bold uppercase tracking-widest text-[#E5B842]">
+              <div className="min-w-0">
+                <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-widest text-[#E5B842]">
                   Target Domain Asset
                 </span>
-                <div className="font-serif text-2xl sm:text-3xl font-extrabold tracking-tight text-white flex items-center gap-1.5">
+                <div className="font-serif text-lg sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white flex items-center flex-wrap gap-1">
                   miamipropertydeals<span className="text-[#E5B842]">.com</span>
                 </div>
               </div>
