@@ -18,7 +18,6 @@ export default function OfferFormSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const whatsappNumber = "213793115371";
-  const whatsappDisplay = "+213 793 11 53 71";
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -84,7 +83,7 @@ export default function OfferFormSection() {
                 <h3 className="font-serif text-2xl font-bold text-white">Offer Submitted!</h3>
                 <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
                   Thank you, <strong className="text-white">{formData.name}</strong>. Your offer has been recorded. 
-                  You can also connect immediately on WhatsApp at <strong className="text-[#FDF0CD]">{whatsappDisplay}</strong>.
+                  You can also connect immediately on WhatsApp.
                 </p>
 
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -93,7 +92,7 @@ export default function OfferFormSection() {
                     className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider text-emerald-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-lg"
                   >
                     <MessageSquare className="w-4 h-4" />
-                    <span>Chat on WhatsApp ({whatsappDisplay})</span>
+                    <span>Chat on WhatsApp</span>
                   </button>
 
                   <button
@@ -277,8 +276,10 @@ export default function OfferFormSection() {
                   <span className="font-semibold text-emerald-400">Express 24-48 Hours</span>
                 </div>
                 <div className="flex items-center justify-between text-xs py-2">
-                  <span className="text-slate-400">Direct Contact:</span>
-                  <span className="font-semibold text-white font-mono">{whatsappDisplay}</span>
+                  <span className="text-slate-400">Direct Communication:</span>
+                  <span className="font-semibold text-emerald-400 flex items-center gap-1">
+                    <MessageSquare className="w-3.5 h-3.5" /> Instant WhatsApp
+                  </span>
                 </div>
               </div>
 

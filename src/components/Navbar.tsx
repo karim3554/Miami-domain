@@ -90,7 +90,7 @@ export default function Navbar() {
               className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-300 hover:text-white bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/40 transition-all"
             >
               <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
-              <span>WhatsApp: +213 793 11 53 71</span>
+              <span>Chat on WhatsApp</span>
             </a>
 
             <a
@@ -137,7 +137,7 @@ export default function Navbar() {
               className="w-full text-center py-2.5 rounded-lg text-xs font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 flex items-center justify-center space-x-2"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>WhatsApp: +213 793 11 53 71</span>
+              <span>Chat on WhatsApp</span>
             </a>
             <a
               href="#make-offer"

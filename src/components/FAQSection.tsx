@@ -95,7 +95,7 @@ export default function FAQSection() {
             className="px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-emerald-300 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-500/40 flex items-center space-x-2 transition-all shadow-md shrink-0"
           >
             <MessageSquare className="w-4 h-4 text-emerald-400" />
-            <span>WhatsApp (+213 793 11 53 71)</span>
+            <span>Chat on WhatsApp</span>
           </a>
         </div>
 

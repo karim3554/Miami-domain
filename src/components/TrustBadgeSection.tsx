@@ -106,7 +106,7 @@ export default function TrustBadgeSection() {
               className="inline-flex items-center space-x-1.5 text-emerald-400 hover:underline font-semibold"
             >
               <MessageSquare className="w-3.5 h-3.5" />
-              <span>Questions? Chat on WhatsApp (+213 793 11 53 71)</span>
+              <span>Questions? Chat on WhatsApp</span>
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>
