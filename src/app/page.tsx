@@ -1,16 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import WhyDomainSection from '@/components/WhyDomainSection';
-import UseCasesSection from '@/components/UseCasesSection';
-import ValuationComparablesSection from '@/components/ValuationComparablesSection';
-import DomainValuationCalculator from '@/components/DomainValuationCalculator';
-import TrustBadgeSection from '@/components/TrustBadgeSection';
-import OfferFormSection from '@/components/OfferFormSection';
-import FAQSection from '@/components/FAQSection';
-import Footer from '@/components/Footer';
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import WhyDomainSection from '../components/WhyDomainSection';
+import UseCasesSection from '../components/UseCasesSection';
+import ValuationComparablesSection from '../components/ValuationComparablesSection';
+import DomainValuationCalculator from '../components/DomainValuationCalculator';
+import TrustBadgeSection from '../components/TrustBadgeSection';
+import OfferFormSection from '../components/OfferFormSection';
+import FAQSection from '../components/FAQSection';
+import Footer from '../components/Footer';
 import { Check } from 'lucide-react';
 
 export default function Home() {
