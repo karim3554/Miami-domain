@@ -92,7 +92,7 @@ export default function Footer() {
                 className="inline-flex items-center justify-between p-3 rounded-lg bg-emerald-950/50 hover:bg-emerald-900/70 border border-emerald-500/40 text-xs text-emerald-300 transition-all"
               >
                 <span className="font-semibold flex items-center gap-1.5">
-                  <MessageSquare className="w-3.5 h-3.5" /> WhatsApp (+213 793 11 53 71)
+                  <MessageSquare className="w-3.5 h-3.5" /> Chat on WhatsApp
                 </span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
