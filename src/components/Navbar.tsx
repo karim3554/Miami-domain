@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ShieldCheck, ExternalLink, Menu, X, Sparkles, MessageSquare } from 'lucide-react';
+import { ShieldCheck, ExternalLink, Menu, X, MessageSquare } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,31 +38,38 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Brand Logo */}
-          <a href="#" className="flex items-center space-x-2.5 group">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#E5B842] via-[#FDF0CD] to-[#B88E28] p-0.5 flex items-center justify-center shadow-lg shadow-[#E5B842]/25 group-hover:shadow-[#E5B842]/50 transition-all">
-              <div className="w-full h-full bg-[#0A1124] rounded-[7px] flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-[#E5B842]" />
+        <div className="flex items-center justify-between gap-4">
+          
+          {/* Brand Logo with Premium SVG */}
+          <a href="#" className="flex items-center space-x-3 group shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E5B842] via-[#FDF0CD] to-[#B88E28] p-[1.5px] flex items-center justify-center shadow-lg shadow-[#E5B842]/15 group-hover:shadow-[#E5B842]/30 transition-all">
+              <div className="w-full h-full bg-[#0A1124] rounded-[10px] flex items-center justify-center p-1.5">
+                <svg className="w-full h-full text-[#E5B842]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Luxury Logo: Art Deco M & P Monogram with Miami Palms */}
+                  <path d="M20 80 V30 L50 60 L80 30 V80" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M50 20 V60" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
+                  <circle cx="50" cy="20" r="8" fill="currentColor"/>
+                  <path d="M35 50 H65" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
+                </svg>
               </div>
             </div>
             <div className="flex flex-col">
               <span className="font-serif font-bold text-lg sm:text-xl tracking-tight text-white group-hover:text-[#FDF0CD] transition-colors">
                 miamipropertydeals<span className="text-[#E5B842]">.com</span>
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-slate-400 -mt-1 font-medium">
-                Premium Digital Asset
+              <span className="text-[9px] uppercase tracking-widest text-[#E5B842] -mt-1 font-bold">
+                Premium Domain Asset
               </span>
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-7">
+          {/* Desktop Navigation (Shows only on large screens, preventing overlap) */}
+          <nav className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm text-slate-300 hover:text-[#E5B842] transition-colors font-medium relative group"
+                className="text-xs xl:text-sm text-slate-300 hover:text-[#E5B842] transition-colors font-semibold tracking-wide relative group shrink-0"
               >
                 {link.name}
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#E5B842] transition-all duration-300 group-hover:w-full" />
@@ -70,13 +77,13 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Action Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
+          {/* Action Buttons (Strictly responsive to prevent crowding) */}
+          <div className="hidden xl:flex items-center space-x-3 shrink-0">
             <a
               href="https://www.godaddy.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-200 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-[#E5B842]/50 transition-all"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-200 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-[#E5B842]/50 transition-all"
             >
               <ShieldCheck className="w-3.5 h-3.5 text-[#E5B842]" />
               <span>GoDaddy Verified</span>
@@ -87,7 +94,7 @@ export default function Navbar() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-300 hover:text-white bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/40 transition-all"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-emerald-300 hover:text-white bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/40 transition-all"
             >
               <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
               <span>Chat on WhatsApp</span>
@@ -95,14 +102,14 @@ export default function Navbar() {
 
             <a
               href="#make-offer"
-              className="inline-flex items-center justify-center px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-[#0A1124] bg-gradient-to-r from-[#FDF0CD] via-[#E5B842] to-[#B88E28] hover:brightness-110 transition-all shadow-md shadow-[#E5B842]/20 active:scale-95"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-[#0A1124] bg-gradient-to-r from-[#FDF0CD] via-[#E5B842] to-[#B88E28] hover:brightness-110 transition-all shadow-md shadow-[#E5B842]/20 active:scale-95"
             >
               Make an Offer
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden">
+          {/* Mobile Menu Button (Activated for both small and medium/large screens below xl) */}
+          <div className="flex lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 focus:outline-none"
@@ -116,7 +123,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0A1124]/98 backdrop-blur-xl border-b border-[#E5B842]/30 px-4 pt-4 pb-6 space-y-4 shadow-2xl">
+        <div className="lg:hidden bg-[#0A1124]/98 backdrop-blur-xl border-b border-[#E5B842]/30 px-4 pt-4 pb-6 space-y-4 shadow-2xl">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a
